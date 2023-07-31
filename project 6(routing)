@@ -1,0 +1,59 @@
+index.js:
+
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Joinus from "./Joinus";
+const routing=(
+<Router>
+<div>
+<h1> About BATA</h1>
+<Routes>
+<Route path="/h"element={<Home/>}/>
+<Route path="/a" element={<About/>}/>
+<Route path="/j" element={<Joinus/>}/>
+</Routes>
+</div>
+</Router>
+)
+
+ReactDOM.createRoot(document.getElementById('root')).render(routing);
+-------------------------------------------------------------------------------------------------------------------------
+Home.js:
+
+import React, { Component } from "react";
+import s from'./s.jpeg';
+import s1 from'./s1.jpeg';
+class home extends Component{
+render(){
+return(
+<div>
+<div>
+<div>
+<img src={s} alt='logo' width="300" height="200" ></img>
+<img src={s1} alt='logo' width="300" height="200" ></img>
+</div>
+<br/>
+<br/>
+
+
+</div>
+</div>
+----------------------------------------------------------------------------------------------------------------------------------
+About.js:
+import React,{Component} from "react";
+
+class About extends Component{
+    render(){
+    return(
+        <div>
+        <h1>About Amazon</h1>
+        <h2>welcome to company</h2>
+        <h3>When Amazon.com launched in 1995, it was with the mission “to be Earth's most customer-centric company.” What does this mean? It's simple.<br/> We're a company that obsesses over our customers. Our actions, goals, projects, programs and inventions begin and end with the customer top of mind. In other words, we start with the customer and work backwards.<br/>When we hit on something that is really working for customers, we double-down on it with hopes to turn it into an even bigger success. However, it’s not always as clean as that. Inventing is messy, and over time, it’s certain that we’ll fail at some big bets too.</h3>
+       
+        </div>
+    );
+    }
+    }
+    export default About;
